@@ -33,14 +33,14 @@
 <h2>
 <a id="install-the-plugin" class="anchor" href="#install-the-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install the plugin</h2>
 
-<p>please download the plugin file into C: so that it can run properly.</p>
+<p>please <a href="https://github.com/mll-freiburg/lr-facetags/archive/master.zip">download (latest version from git)</a> the plugin file into the Adobe Lightroom folder (e.g. C:\Program Files\Adobe\Adobe Photoshop Lightroom 5.7) so that it can run properly.</p>
 
 <h3>
 <a id="lightroom" class="anchor" href="#lightroom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lightroom</h3>
 
 <p>start Lightroom, and select File -&gt; Plugin Manager.
 in the lower left corner, click Add, and choose the correct directory
-(in this case it should be C:\lrfacetags.lrdevplugin)
+(in this case it should be C:\Program Files\Adobe\Adobe Photoshop Lightroom 5.7)
 Once installed correctly, you'll see Lightroom Facetags setup as a new plugin within Plugin Manager.</p>
 
 <h2>
@@ -51,7 +51,7 @@ Once installed correctly, you'll see Lightroom Facetags setup as a new plugin wi
 
 <ol>
 <li>Open Lightroom, go to File -&gt; Plugin Extras and click on Lr Facetags.</li>
-<li>Wait until detection is done. (May take some time)</li>
+<li>Wait until detection is done. (May take some time, a progressbar will show up)</li>
 <li>Remove boxes that do not mark faces or you do not need (e.g. if you do not know the person), or add boxes whenever a face was not detected.</li>
 <li>Add some persons to the training set (see next paragraph).</li>
 <li>Run face recognition. (May take some time)</li>
@@ -83,8 +83,16 @@ Once installed correctly, you'll see Lightroom Facetags setup as a new plugin wi
 <li>Clear selection: Escape</li>
 </ul>
 
-<h2>
-<a id="bugs" class="anchor" href="#bugs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bugs</h2>
+<h1>
+<a id="source-code" class="anchor" href="#source-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source code</h1>
+
+<p>The source code of the external C++ plugin program (witch dose all the magic) can be found in the <strong>source</strong> subfolder.</p>
+
+<h1>
+<a id="problems-bugs" class="anchor" href="#problems-bugs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problems (Bugs)</h1>
+
+<p>If you find a Bug and want to report them, plese use thte Github issues system:
+<a href="https://github.com/mll-freiburg/lr-facetags/issues">https://github.com/mll-freiburg/lr-facetags/issues</a></p>
       </section>
     </div>
 
