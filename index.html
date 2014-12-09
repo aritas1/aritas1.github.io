@@ -44,6 +44,31 @@
 <li>Once installed correctly, you'll see Lightroom Facetags setup as a new plugin within Plugin Manager.</li>
 </ul>
 
+<h3>
+<a id="use-preview-image" class="anchor" href="#use-preview-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use preview image</h3>
+
+<p>If you like to use the lightroom preview images in your face recognition, you need to adjust some settings:</p>
+
+<ol>
+<li><p>You need to be able to extract your previews. In Lightroom, choose Edit -&gt; Preferences.
+Then choose the Preset tab and select Show Lightroom Presets folder.
+For this create a folder in the Lightroom folder called Scripts.
+Then copy the ExtractPreviews.lua (inside our plugin file) script into the Scripts folder.
+Quit and reopen Lightroom. Then in Lightroom, choose the ExtractPreviews from the Script menu.
+Finally choose a location for your extracted previews(more information about that in step 2) </p></li>
+<li><p>You need to create a folder in C:\ called Lightroom and another folder inside it called Previews.
+In this folder you should extract all preview photos you want to use for recognition (that would be C:\Lightroom\Previews)</p></li>
+<li><p>Change the lines 27-29 in lrfacetags.lrdevplugin/FacetagsPlugin.lua to:</p></li>
+</ol>
+
+<p><code>--LrTasks.execute('lrfacetags.lrdevplugin\\facetagsPlugin.exe "%HOMEPATH%\\Documents\\photosPath.log"')</code><br>
+<code>-- Use preview images stored in C:\Lightroom\Previews</code><br>
+<code>LrTasks.execute('lrfacetags.lrdevplugin\\facetagsPlugin.exe')</code><br></p>
+
+<ol>
+<li>Now the system will use ONLY the images in the folder C:\Lightroom\Previews for the face detetion/recognition task.</li>
+</ol>
+
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
